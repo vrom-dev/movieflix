@@ -22,6 +22,8 @@ public enum Categorias {
 		return codigo;
 	}
 	
+	
+	
 	public static int getSize() {
 		return size;
 	}
