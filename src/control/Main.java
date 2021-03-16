@@ -3,6 +3,7 @@ package control;
 import datos.GestionPeliculas;
 import datos.GestionUsuarios;
 import gui.Menu;
+import modelo.Categorias;
 import modelo.Usuario;
 import utilidades.LecturaDatos;
 
@@ -46,9 +47,16 @@ public class Main {
                  break;
 
              case 8:
+            	 //Listado de películas por categoría
+            	 System.out.println("Selecciona una categoría:");
+            	 Categorias.mostrarCategorias();
+            	 peliculas.listarPorCategoria(LecturaDatos.leerInt());
+            	 break;
+            	 
+             case 9:
                  //PELÍCULAS MEJOR VALORADAS
                  break;
-
+                 
              case 0:
             	 //Se puede añadir método para confirmar que se quiere salir
                  seguir = false;

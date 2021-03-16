@@ -50,5 +50,11 @@ public class GestionUsuarios {
 		System.out.println(listaUsuarios.get(codigo).toString());
 	}
 	
+	public void listarUsuarios() {
+		System.out.println("### Listado de usuarios ###");
+		for(Integer key: listaUsuarios.keySet()) {
+			System.out.println(listaUsuarios.get(key).toString());
+		}
+	}
 	
 }

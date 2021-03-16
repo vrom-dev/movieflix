@@ -52,6 +52,7 @@ public class Pelicula {
 		
 		this.setNombre(LecturaDatos.leerLinea("Introduce el nombre de la película"));
 		this.setEstreno(LecturaDatos.leerInt("Introduce el año del estreno"));
+		Categorias.mostrarCategorias();
 		int categoriaID = LecturaDatos.leerInt("Introduce el ID de la categoría");
 		
 		this.setCategoria(Categorias.getNombreCategoria(categoriaID));

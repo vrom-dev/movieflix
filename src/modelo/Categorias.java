@@ -1,6 +1,6 @@
 package modelo;
 
-/* @author Alvaro */ 
+/** @author Alvaro */ 
 
 public enum Categorias {
 	
@@ -18,7 +18,7 @@ public enum Categorias {
 		this.codigo = codigo;
 	}
 	
-	private int getCodigo() {
+	public int getCodigo() {
 		return codigo;
 	}
 	
@@ -26,6 +26,18 @@ public enum Categorias {
 	
 	public static int getSize() {
 		return size;
+	}
+	
+	public static void mostrarCategorias() {
+		StringBuilder str;
+        for (Categorias cat : Categorias.values()) {
+            str = new StringBuilder();
+            str.append("(").
+                    append(cat.codigo).
+                    append(") ").
+                    append(cat);
+            System.out.println(str);
+        }
 	}
 	
 	/* @author Antonio */ 
@@ -36,7 +48,7 @@ public enum Categorias {
             Categorias.values = Categorias.values();
         }
         
-        return Categorias.values[val];
+        return Categorias.values[val-1]; //arreglo provisional
     }
 	
 	
