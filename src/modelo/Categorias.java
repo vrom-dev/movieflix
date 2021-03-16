@@ -18,10 +18,9 @@ public enum Categorias {
 		this.codigo = codigo;
 	}
 	
-	private int getCodigo() {
+	public int getCodigo() {
 		return codigo;
 	}
-	
 	
 	
 	public static int getSize() {
