@@ -1,5 +1,7 @@
 package modelo;
 
+import utilidades.LecturaDatos;
+
 public class Pelicula {
 	
 	private String nombre; 
@@ -43,6 +45,18 @@ public class Pelicula {
 				"\n Estreno=" + estreno + 
 				"\n categoria=" + categoria + 
 				"\n";
+	}
+	
+	
+	public void datosPelicula() {
+		
+		this.setNombre(LecturaDatos.leerLinea("Introduce el nombre de la película"));
+		this.setEstreno(LecturaDatos.leerInt("Introduce el año del estreno"));
+		int categoriaID = LecturaDatos.leerInt("Introduce el ID de la categoría");
+		
+		this.setCategoria(Categorias.getNombreCategoria(categoriaID));
+		
+		
 	}
 	
 	
