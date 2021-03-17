@@ -72,11 +72,12 @@ public class Pelicula {
 	
 	public void imprimirPelicula() {
 		
-		System.out.println("========================");
+
 		System.out.println("Título: " + this.getNombre());
 		System.out.println("Estreno: " + this.getEstreno());
 		System.out.println("Categoría: " + this.getCategoria());
-		System.out.println("========================");		
+		System.out.println("========================");
+		
 		
 	}
 	

@@ -9,7 +9,8 @@ public enum Categorias {
 	Aventuras(3),
 	Comedia(4),
 	Animacion(5),
-	Thriller(6);
+	Thriller(6),
+	Dummie(7);
 	
 	private final int codigo;
 	private static final int size = Categorias.values().length;

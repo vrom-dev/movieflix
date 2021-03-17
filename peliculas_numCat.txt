@@ -32,14 +32,14 @@ El caso Bourne,2002,1
 La noche de los cristales rotos,1991,1
 Arma letal,1987,1
 La jungla de cristal,1988,1
-El padrino,1972,1 
-Ciudad de Dios,2002,1 
+El padrino,1972,1
+Ciudad de Dios,2002,1
 Uno de los nuestros,1990,1
 Pulp Fiction,1994,1
 Avengers: Infinity War,2018,3
-Jurassic World: Fallen Kingdom,2018,3 
-Venom,2018,3 
-Avatar,2009,3 
+Jurassic World: Fallen Kingdom,2018,3
+Venom,2018,3
+Avatar,2009,3
 Deadpool,2016,4
 Un Lugar tranquilo,2018,6
 Lo imposible,2012,6
@@ -70,8 +70,8 @@ Postdata: Te Quiero,2007,2
 Pretty Woman,1990,2
 Juego de Ladrones. El atraco perfecto,2018,1
 La isla siniestra,2010,1
-Ralph Rompe internet,2018,5 
-Los increibles ,2004,5 
+Ralph Rompe internet,2018,5
+Los increibles ,2004,5
 Los intocables de Eliot Ness,1987,1
 Bobby Z,2007,1
 Deadpool,2016,4

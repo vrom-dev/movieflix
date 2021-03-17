@@ -53,6 +53,7 @@ public class Main {
              case 7:
                  //LISTADO DE TODAS LAS PELÍCULAS
             	 System.out.println("*    7.-Listados de todas la Peliculas");
+            	 System.out.println();
             	 
             	 peliculas.imprimirListaPeliculas();
             	 
@@ -78,6 +79,7 @@ public class Main {
 	public static void main(String[] args) {
 		GestionPeliculas listadoPeliculas = new GestionPeliculas();
 		GestionUsuarios listadoUsuarios = new GestionUsuarios();
+		listadoPeliculas.cargarPeliculas();
 		menuPrincipal(listadoPeliculas, listadoUsuarios);
 	}
 
