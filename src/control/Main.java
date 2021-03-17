@@ -3,6 +3,7 @@ package control;
 import datos.GestionPeliculas;
 import datos.GestionUsuarios;
 import gui.Menu;
+import modelo.Pelicula;
 import modelo.Usuario;
 import utilidades.LecturaDatos;
 
@@ -39,6 +40,9 @@ public class Main {
 
              case 6:
                  //MODIFICAR PELICULAS
+            	 int codp = LecturaDatos.leerInt("Introducir el Codigo de la pelicula que quieres eliminar");
+            	 peliculas.modificarPeliculas(codp);
+            	 
                  break;
 
              case 7:

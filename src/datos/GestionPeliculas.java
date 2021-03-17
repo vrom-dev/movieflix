@@ -27,5 +27,13 @@ public class GestionPeliculas {
 		
 	}
 	
+	// metodo modificarPeliculas
+	public void modificarPeliculas(Integer id) {
+		System.out.println("### Modificación de la Pelicula " + id  + " ###");		
+		peliculas.get(id).datosPelicula();
+		System.out.println("### La pelicula ha sido actualizada ###");
+		System.out.println(peliculas.get(id).toString());
+	}
+	
 	
 }
