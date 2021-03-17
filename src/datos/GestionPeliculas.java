@@ -10,6 +10,7 @@ import modelo.Categorias;
 import modelo.Pelicula;
 import modelo.Usuario;
 
+
 public class GestionPeliculas {
 
 	private HashMap<Integer, Pelicula> peliculas = new HashMap<Integer, Pelicula>();
@@ -50,6 +51,8 @@ public class GestionPeliculas {
 
 	}
 
+
+
 	public void imprimirListaPeliculas() {
 
 		for (Integer i : this.peliculas.keySet()) {
@@ -71,7 +74,8 @@ public class GestionPeliculas {
 	 * @param none
 	 * @return void
 	 * @exception En caso de no encontar el archivo, avisa al usuario de que ha
-	 *               habido un problema
+	 * habido un problema
+	 * 
 	 * 
 	 */
 	public void cargarPeliculas() {
