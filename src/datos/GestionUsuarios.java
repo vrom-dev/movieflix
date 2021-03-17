@@ -51,6 +51,7 @@ public class GestionUsuarios {
 
 	// metodo eliminarUsuario, falta añadir exception
 	
+<<<<<<< HEAD
 	public void eliminarUsuario(Integer codigo) {
 		if (listaUsuarios.containsKey(codigo)) {
 			listaUsuarios.remove(codigo);
@@ -62,4 +63,13 @@ public class GestionUsuarios {
 
 	}
 
+=======
+	public void listarUsuarios() {
+		System.out.println("### Listado de usuarios ###");
+		for(Integer key: listaUsuarios.keySet()) {
+			System.out.println(listaUsuarios.get(key).toString());
+		}
+	}
+	
+>>>>>>> 230c4cdf3faf8e14148b103f69f6ca85951977b5
 }
