@@ -3,11 +3,9 @@ package control;
 import datos.GestionPeliculas;
 import datos.GestionUsuarios;
 import gui.Menu;
-
 import modelo.Pelicula;
-
+import modelo.Pelicula;
 import modelo.Categorias;
-
 import modelo.Usuario;
 import utilidades.LecturaDatos;
 
@@ -17,6 +15,9 @@ public class Main {
 		boolean seguir = true;
 		do {
 			Menu.mostrarMenu();
+
+			int cod;
+
 			switch (LecturaDatos.leerInt()) {
 			case 1:
 				// ALTA DE UN USUARIOS
@@ -27,7 +28,6 @@ public class Main {
 
 			case 2:
 				// ELIMINAR UN USUARIO
-				int cod;
 				cod = LecturaDatos.leerInt("Introduce el código del usuario que quieres eliminar ");
 				usuarios.eliminarUsuario(cod);
 				break;
@@ -42,12 +42,15 @@ public class Main {
 
 			case 5:
 				// ELIMINAR PELICULAS
+				// Se puede añadir un trow exception
+				cod = LecturaDatos.leerInt("Introduzca el código de la película que desea eliminar: ");
+				peliculas.eliminarPelicula(cod);
 				break;
 
 			case 6:
 				// MODIFICAR PELICULAS
-				int codp = LecturaDatos.leerInt("Introducir el Codigo de la pelicula que quieres eliminar");
-				peliculas.modificarPeliculas(codp);
+				cod = LecturaDatos.leerInt("Introducir el Codigo de la pelicula que quieres eliminar");
+				peliculas.modificarPeliculas(cod);
 
 				break;
 
@@ -75,6 +78,7 @@ public class Main {
 				System.out.println("La opción escogida no es válida. Escoge otra opción");
 				break;
 			}
+
 		} while (seguir);
 	}
 

@@ -1,9 +1,9 @@
 package datos;
 
 import java.util.HashMap;
-
 import modelo.Categorias;
 import modelo.Pelicula;
+import modelo.Usuario;
 
 public class GestionPeliculas {
 
@@ -22,6 +22,20 @@ public class GestionPeliculas {
 			// p.datosPelicula();
 			peliculas.put(id, p);
 
+		}
+
+	}
+
+	public Pelicula buscarPelicula(Integer codigo) {
+		return peliculas.get(codigo);
+	}
+
+	// falta añadir un exception
+	public void eliminarPelicula(Integer codigo) {
+		if (peliculas.containsKey(codigo)) {
+			peliculas.remove(codigo);
+		} else {
+			System.out.println("Este id no está en la lista de peliculas.");
 		}
 
 	}
