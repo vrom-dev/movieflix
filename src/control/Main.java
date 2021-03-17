@@ -24,6 +24,9 @@ public class Main {
 
              case 2:
                  //ELIMINAR UN USUARIO
+            	 int cod;
+            	 cod=LecturaDatos.leerInt("Introduce el código del usuario que quieres eliminar ");
+            	 usuarios.eliminarUsuario(cod);
                  break;
 
              case 3:
