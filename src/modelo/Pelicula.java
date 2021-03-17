@@ -15,6 +15,17 @@ public class Pelicula {
 	
 	
 	
+	
+	public Pelicula(String nombre, int estreno, Categorias categoria) {
+		super();
+		this.nombre = nombre;
+		this.estreno = estreno;
+		this.categoria = categoria;
+	}
+
+
+
+
 	public String getNombre() {
 		return nombre;
 	}
