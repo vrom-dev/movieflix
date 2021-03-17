@@ -99,10 +99,6 @@ public class GestionPeliculas {
 			}
 			
 			
-			
-			
-			
-			
 		} catch (Exception e) {
 			
 			System.out.println("Archivo de películas no encontrado");
