@@ -7,9 +7,9 @@ import modelo.Usuario;
 
 public class GestionUsuarios {
 	private Map<Integer, Usuario> listaUsuarios = new HashMap<>();
-	
-	public GestionUsuarios () {
-		
+
+	public GestionUsuarios() {
+
 	}
 
 	public GestionUsuarios(Map<Integer, Usuario> listaUsuarios) {
@@ -24,31 +24,49 @@ public class GestionUsuarios {
 	public void setListaUsuarios(Map<Integer, Usuario> listaUsuarios) {
 		this.listaUsuarios = listaUsuarios;
 	}
-	
 
 	public boolean existeUsuario(Integer codigo) {
 		return listaUsuarios.containsKey(codigo);
 	}
-	
+
 	public Usuario buscarUsuario(Integer codigo) {
 		return listaUsuarios.get(codigo);
 	}
-	
-	//TODO Añadir throw exception y se puede mirar cómo se genera el código
+
+	// TODO Añadir throw exception y se puede mirar cómo se genera el código
 	public void altaUsuarios(Integer codigo, Usuario user) {
-		if(listaUsuarios.containsKey(codigo)) {
+		if (listaUsuarios.containsKey(codigo)) {
 			System.out.println("Este id ya está en la lista de usuarios.");
 		} else {
 			listaUsuarios.put(codigo, user);
 		}
-	}	
-	
+	}
+
 	public void modificarUsuario(Integer codigo) {
-		System.out.println("### Modificación del usuario con código " + codigo  + " ###");		
+		System.out.println("### Modificación del usuario con código " + codigo + " ###");
 		listaUsuarios.get(codigo).crearUsuario();
 		System.out.println("### Usuario actualizado ###");
 		System.out.println(listaUsuarios.get(codigo).toString());
 	}
-	
-	
+
+	// metodo eliminarUsuario, falta añadir exception
+
+	public void eliminarUsuario(Integer codigo) {
+		if (listaUsuarios.containsKey(codigo)) {
+			listaUsuarios.remove(codigo);
+			System.out.println("### Eliminación del usuario con código " + codigo + " ###");
+			System.out.println("### Usuario eliminado ###");
+		} else {
+			System.out.println("El usuario no existe ");
+		}
+
+	}
+
+	public void listarUsuarios() {
+		System.out.println("### Listado de usuarios ###");
+		for (Integer key : listaUsuarios.keySet()) {
+			System.out.println(listaUsuarios.get(key).toString());
+		}
+	}
+
 }
