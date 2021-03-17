@@ -38,6 +38,14 @@ public class Main {
 
 			case 4:
 				// AÑADIR PELICULAS
+
+				System.out.println("*    4.-Añadir Peliculas");
+
+				Pelicula p = new Pelicula();
+				Integer id = (int) Math.random() * 100000 + 1;
+
+				peliculas.altaPelicula(id, p);
+
 				break;
 
 			case 5:
@@ -56,6 +64,11 @@ public class Main {
 
 			case 7:
 				// LISTADO DE TODAS LAS PELÍCULAS
+
+				System.out.println("*    7.-Listados de todas la Peliculas");
+				System.out.println();
+
+				peliculas.imprimirListaPeliculas();
 				break;
 
 			case 8:
@@ -85,6 +98,7 @@ public class Main {
 	public static void main(String[] args) {
 		GestionPeliculas listadoPeliculas = new GestionPeliculas();
 		GestionUsuarios listadoUsuarios = new GestionUsuarios();
+		listadoPeliculas.cargarPeliculas();
 		menuPrincipal(listadoPeliculas, listadoUsuarios);
 	}
 

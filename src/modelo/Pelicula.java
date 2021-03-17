@@ -15,6 +15,17 @@ public class Pelicula {
 	
 	
 	
+	
+	public Pelicula(String nombre, int estreno, Categorias categoria) {
+		super();
+		this.nombre = nombre;
+		this.estreno = estreno;
+		this.categoria = categoria;
+	}
+
+
+
+
 	public String getNombre() {
 		return nombre;
 	}
@@ -56,6 +67,17 @@ public class Pelicula {
 		int categoriaID = LecturaDatos.leerInt("Introduce el ID de la categoría");
 		
 		this.setCategoria(Categorias.getNombreCategoria(categoriaID));
+		
+		
+	}
+	
+	public void imprimirPelicula() {
+		
+
+		System.out.println("Título: " + this.getNombre());
+		System.out.println("Estreno: " + this.getEstreno());
+		System.out.println("Categoría: " + this.getCategoria());
+		System.out.println("========================");
 		
 		
 	}
