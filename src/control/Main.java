@@ -3,6 +3,7 @@ package control;
 import datos.GestionPeliculas;
 import datos.GestionUsuarios;
 import gui.Menu;
+import modelo.Pelicula;
 import modelo.Usuario;
 import utilidades.LecturaDatos;
 
@@ -34,7 +35,10 @@ public class Main {
                  break;
 
              case 5:
-                 //ELIMINAR PELICULAS
+            	 //ELIMINAR PELICULAS
+            	 //Se puede añadir un trow exception
+            	 int cod = LecturaDatos.leerInt("Introduzca el código de la película que desea eliminar: ");
+                 peliculas.eliminarPelicula(cod);
                  break;
 
              case 6:
