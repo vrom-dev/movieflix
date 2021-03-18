@@ -5,10 +5,6 @@ import java.util.HashMap;
 import java.util.Scanner;
 import modelo.Categorias;
 import modelo.Pelicula;
-import utilidades.LecturaDatos;
-import modelo.Categorias;
-import modelo.Pelicula;
-import modelo.Usuario;
 
 
 public class GestionPeliculas {
@@ -33,20 +29,12 @@ public class GestionPeliculas {
 	}
 
 	public void altaPelicula(Integer id, Pelicula p) {
-
-		// Pelicula p = new Pelicula();
-
 		if (peliculas.containsKey(id)) {
-
 			System.out.println("El código ya existe");
-
 		} else {
-
-			// p.datosPelicula();
+			p.datosPelicula();
 			peliculas.put(id, p);
-
 			System.out.println("Película añadida");
-
 		}
 
 	}
@@ -57,7 +45,7 @@ public class GestionPeliculas {
 
 		for (Integer i : this.peliculas.keySet()) {
 
-			this.peliculas.get(i).imprimirPelicula();
+			this.peliculas.get(i).imprimirPelicula(i);
 
 		}
 
@@ -149,7 +137,7 @@ public class GestionPeliculas {
 		System.out.println("*** Categoría: " + Categorias.getNombreCategoria(id) + " ***");
 		for (Integer key : peliculas.keySet()) {
 			if (peliculas.get(key).getCategoria().getCodigo() == id) {
-				System.out.println(peliculas.get(key));
+				peliculas.get(key).imprimirPelicula(key);
 			}
 		}
 

@@ -1,85 +1,55 @@
 package control;
 
-import datos.GestionPeliculas;
-import datos.GestionUsuarios;
 import gui.Menu;
-import modelo.Pelicula;
-import modelo.Pelicula;
-import modelo.Categorias;
-import modelo.Usuario;
+import services.PeliculasServices;
+import services.UsuariosServices;
 import utilidades.LecturaDatos;
 
 public class Main {
 
-	public static void menuPrincipal(GestionPeliculas peliculas, GestionUsuarios usuarios) {
+	public static void menuPrincipal(PeliculasServices peliculas, UsuariosServices usuarios) {
 		boolean seguir = true;
 		do {
 			Menu.mostrarMenu();
-
-			int cod;
-
 			switch (LecturaDatos.leerInt()) {
 			case 1:
 				// ALTA DE UN USUARIOS
-				Usuario user = new Usuario();
-				user.crearUsuario();
-				usuarios.altaUsuarios((int) Math.random() * 10000 + 1, user);
+				usuarios.addUsuario();
 				break;
 
 			case 2:
 				// ELIMINAR UN USUARIO
-				cod = LecturaDatos.leerInt("Introduce el código del usuario que quieres eliminar ");
-				usuarios.eliminarUsuario(cod);
+				usuarios.eliminarUsuario();
 				break;
 
 			case 3:
 				// MODIFICAR USUARIO
+				usuarios.modificarUsuario();
 				break;
 
 			case 4:
 				// AÑADIR PELICULAS
-
-				System.out.println("*    4.-Añadir Peliculas");
-
-				Pelicula p = new Pelicula();
-				Integer id = (int) Math.random() * 100000 + 1;
-
-				peliculas.altaPelicula(id, p);
-
+				peliculas.addPelicula();
 				break;
 
 			case 5:
 				// ELIMINAR PELICULAS
-				// Se puede añadir un trow exception
-				cod = LecturaDatos.leerInt("Introduzca el código de la película que desea eliminar: ");
-				peliculas.eliminarPelicula(cod);
+				peliculas.eliminarPelicula();
 				break;
 
 			case 6:
 				// MODIFICAR PELICULAS
-				cod = LecturaDatos.leerInt("Introducir el Codigo de la pelicula que quieres eliminar");
-				peliculas.modificarPeliculas(cod);
-
+				peliculas.modificarPelicula();
 				break;
 
 			case 7:
 				// LISTADO DE TODAS LAS PELÍCULAS
-
-				System.out.println("*    7.-Listados de todas la Peliculas");
-				System.out.println();
-
-				peliculas.imprimirListaPeliculas();
+				peliculas.listarPeliculas();
 				break;
 
 			case 8:
-				// Listado de películas por categoría
-				System.out.println("Selecciona una categoría:");
-				Categorias.mostrarCategorias();
-				peliculas.listarPorCategoria(LecturaDatos.leerInt());
-				break;
-
-			case 9:
-				// PELÍCULAS MEJOR VALORADAS
+				//LISTADO DE PELÍCULAS POR CATEGORIA
+				peliculas.listarPorCategoria();
 				break;
 
 			case 0:
@@ -96,10 +66,10 @@ public class Main {
 	}
 
 	public static void main(String[] args) {
-		GestionPeliculas listadoPeliculas = new GestionPeliculas();
-		GestionUsuarios listadoUsuarios = new GestionUsuarios();
-		listadoPeliculas.cargarPeliculas();
-		menuPrincipal(listadoPeliculas, listadoUsuarios);
+		PeliculasServices servicioPeliculas = new PeliculasServices();
+		servicioPeliculas.cargarPeliculas();
+		UsuariosServices servicioUsuarios = new UsuariosServices();
+		menuPrincipal(servicioPeliculas, servicioUsuarios);
 	}
 
 }
