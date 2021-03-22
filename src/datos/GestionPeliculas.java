@@ -105,11 +105,27 @@ public class GestionPeliculas {
 
 	}
 
+	/**
+	 * Método para buscar una película en concreto a partir del código.
+	 * Devuelve una película.
+	 * 
+	 * @param codigo
+	 * @return película
+	 * @author ALBERTO
+	 */
 	public Pelicula buscarPelicula(Integer codigo) {
 		return peliculas.get(codigo);
 	}
 
 	// falta añadir un exception
+	/**
+	 * Método para eliminar películas a partir del código de la misma.
+	 * Con el condicional if comprueba que exista el código para eliminarlo 
+	 * de lo contrario nos indica que el código proporcionado no existe en la lista de películas.
+	 * @param codigo
+	 * @return void
+	 * @author ALBERTO
+	 */
 	public void eliminarPelicula(Integer codigo) {
 		if (peliculas.containsKey(codigo)) {
 			peliculas.remove(codigo);
@@ -119,7 +135,12 @@ public class GestionPeliculas {
 
 	}
 
-	// metodo modificarPeliculas
+	/**
+	 * @author Luis Rojo
+	 * 
+	 * metodo modificarPeliculas
+	 * @param id
+	 */
 	public void modificarPeliculas(Integer id) {
 		System.out.println("### Modificación de la Pelicula " + id + " ###");
 		peliculas.get(id).datosPelicula();
