@@ -130,11 +130,13 @@ public class GestionPeliculas {
 	 * @return void
 	 * @author ALBERTO
 	 */
-	public void eliminarPelicula(Integer codigo) {
+	public boolean eliminarPelicula(Integer codigo) {
 		if (peliculas.containsKey(codigo)) {
 			peliculas.remove(codigo);
+			return true;
 		} else {
 			System.out.println("Este id no está en la lista de peliculas.");
+			return false;
 		}
 
 	}
