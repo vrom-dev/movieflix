@@ -17,7 +17,19 @@ public class GestionPeliculasTest {
 	public void testEliminaPelicula() {
 		boolean resultado = listaPeliculas.eliminarPelicula(2);
 		assertTrue(resultado);	
-		
+	}
+	
+	@Test
+	public void testCargarPeliculas() {
+		boolean test = listaPeliculas.cargarPeliculas();
+		assertTrue(test);
+	}
+	
+	@Test
+	public void testmodificarPeliculas() {
+		boolean resultado = listaPeliculas.modificarPeliculas(100);
+		assertFalse(resultado);
+
 	}
 
 }
