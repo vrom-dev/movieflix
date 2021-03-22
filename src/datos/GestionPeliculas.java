@@ -140,15 +140,21 @@ public class GestionPeliculas {
 
 	/**
 	 * @author Luis Rojo
-	 * 
-	 *         metodo modificarPeliculas
+	 * metodo modificarPeliculas
 	 * @param id
 	 */
-	public void modificarPeliculas(Integer id) {
-		System.out.println("### Modificación de la Pelicula " + id + " ###");
-		peliculas.get(id).datosPelicula();
-		System.out.println("### La pelicula ha sido actualizada ###");
-		System.out.println(peliculas.get(id).toString());
+	public boolean modificarPeliculas(Integer id) {
+		if (peliculas.containsKey(id)) {
+			System.out.println("### Modificación de la Pelicula " + id + " ###");
+			peliculas.get(id).datosPelicula();
+			System.out.println("### La pelicula ha sido actualizada ###");
+			System.out.println(peliculas.get(id).toString());
+			return true;
+		}else {
+			System.out.println("Este id no está en la lista de peliculas.");
+			return false;
+		}
+		
 	}
 
 	public void listarPorCategoria(Integer id) {
