@@ -44,6 +44,7 @@ public class GestionUsuarios {
 	 */
 	// TODO Añadir throw exception y se puede mirar cómo se genera el código
 	public boolean altaUsuarios(Integer codigo, Usuario user) {
+		if(codigo == null) return false;
 		if (listaUsuarios.containsKey(codigo)) {
 			System.out.println("Este id ya está en la lista de usuarios.");
 			return false;
