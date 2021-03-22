@@ -10,7 +10,7 @@ public class UsuariosServices implements IUsuariosServices {
 	public void addUsuario() {
 		Usuario user = new Usuario();
 		user.crearUsuario();
-		usuarios.altaUsuarios((int) Math.random() * 10000 + 1, user);
+		usuarios.altaUsuarios((int) (Math.random() * 100000) + 1, user);
 	}
 	public void eliminarUsuario() {
 		int cod = LecturaDatos.leerInt("Introduce el código del usuario que quieres eliminar:");
