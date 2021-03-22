@@ -120,9 +120,8 @@ public class SeleccionOpciones {
 				break;
 				
 			case 3: 
-				
+				/** LISTADO DE PELÍCULAS MEJOR VALORADAS */	
 				peliculas.mejorValoradas();
-				
 				break;
 				
 			case 4:

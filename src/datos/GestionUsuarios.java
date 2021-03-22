@@ -54,11 +54,18 @@ public class GestionUsuarios {
 		}
 	}
 
-	public void modificarUsuario(Integer codigo) {
-		System.out.println("### Modificación del usuario con código " + codigo + " ###");
-		listaUsuarios.get(codigo).crearUsuario();
-		System.out.println("### Usuario actualizado ###");
-		System.out.println(listaUsuarios.get(codigo).toString());
+	public boolean modificarUsuario(Integer codigo) {
+		if(codigo == null) return false;
+		if (listaUsuarios.containsKey(codigo)) {
+			System.out.println("### Modificación del usuario con código " + codigo + " ###");
+			listaUsuarios.get(codigo).crearUsuario();
+			System.out.println("### Usuario actualizado ###");
+			System.out.println(listaUsuarios.get(codigo).toString());
+			return true;
+		} else {
+			System.out.println("El código de usuario introducido no existe");
+			return false;
+		}
 	}
 
 	// metodo eliminarUsuario, falta añadir exception
@@ -79,7 +86,8 @@ public class GestionUsuarios {
 	public void listarUsuarios() {
 		System.out.println("### Listado de usuarios ###");
 		for (Integer key : listaUsuarios.keySet()) {
-			System.out.println(listaUsuarios.get(key).toString());
+			System.out.print(listaUsuarios.get(key).toString());
+			System.out.println(" -  Código de usuario: " + key);
 		}
 	}
 

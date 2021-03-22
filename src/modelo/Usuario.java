@@ -81,7 +81,7 @@ public class Usuario {
 	 */
 	@Override
 	public String toString() {
-		return "Nombre: " + nombre + " - Fecha de nacimiento: " + Fechas.formatearFecha(fechaNacimiento, "dd-MM-yyyy") + " Ciudad: " + ciudad;
+		return "Nombre: " + nombre + " - Fecha de nacimiento: " + Fechas.formatearFecha(fechaNacimiento, "dd-MM-yyyy") + " - Ciudad: " + ciudad;
 	}
 
 	
