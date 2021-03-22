@@ -66,7 +66,7 @@ public class GestionPeliculas {
 	 * 
 	 * 
 	 */
-	public void cargarPeliculas() {
+	public boolean cargarPeliculas() {
 
 		try {
 
@@ -96,14 +96,13 @@ public class GestionPeliculas {
 
 			}
 
-			System.out.println("------------------------------------");
-			System.out.println("- Peliculas cargadas correctamente -");
-			System.out.println("------------------------------------");
+			return true;
 
 		} catch (Exception e) {
 
 			System.out.println("Error al cargar el archivo de películas");
 			e.printStackTrace();
+			return false;
 
 		}
 
