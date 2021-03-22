@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import java.time.LocalDate;
 
-import org.junit.BeforeClass;
+import org.junit.Before;
 import org.junit.Test;
 
 import modelo.Usuario;
@@ -12,7 +12,7 @@ import modelo.Usuario;
 public class GestionUsuariosTest {
 	GestionUsuarios listaUsuarios = new GestionUsuarios();
 	
-	@BeforeClass
+	@Before
 	public void crearListaUsuarios() {
 		Usuario user2 = new Usuario("Luis", LocalDate.now(), "Madrid");
 		listaUsuarios.altaUsuarios(1, user2);
