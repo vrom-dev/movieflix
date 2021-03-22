@@ -7,10 +7,12 @@ public class Pelicula {
 	private String nombre; 
 	private int estreno;
 	private Categorias categoria;
+	private float valoracion;
 	
 	
 	public Pelicula() {
 		super();
+		this.valoracion = valoracion();
 	}
 	
 	
@@ -21,6 +23,7 @@ public class Pelicula {
 		this.nombre = nombre;
 		this.estreno = estreno;
 		this.categoria = categoria;
+		this.valoracion = valoracion();
 	}
 
 
@@ -47,6 +50,22 @@ public class Pelicula {
 	public void setCategoria(Categorias categoria) {
 		this.categoria = categoria;
 	}
+	
+	
+
+
+	public float getValoracion() {
+		return valoracion;
+	}
+
+
+
+
+	public void setValoracion(float valoracion) {
+		this.valoracion = valoracion;
+	}
+
+
 
 
 	@Override
@@ -77,12 +96,20 @@ public class Pelicula {
 		System.out.println("Título: " + this.getNombre());
 		System.out.println("Estreno: " + this.getEstreno());
 		System.out.println("Categoría: " + this.getCategoria());
+		System.out.println("Valoración: " + this.valoracion);
 		System.out.println("Código: " + key);
 		System.out.println("========================");
 		
 		
 	}
 	
+	public float valoracion() {
+		
+		float valoracion = (float) (Math.random() * 5);
+		return (float) (Math.round(valoracion * 100.0) / 100.0);
+		
+		
+	}
 	
 
 }
