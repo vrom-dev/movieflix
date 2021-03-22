@@ -18,7 +18,6 @@ public class GestionUsuariosTest {
 		listaUsuarios.altaUsuarios(1, user2);
 	}
 	
-
 	@Test
 	public void testAltaUsuarios() {
 		Usuario user = new Usuario("Victor", LocalDate.now(), "Barcelona");
