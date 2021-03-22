@@ -71,12 +71,13 @@ public class Pelicula {
 		
 	}
 	
-	public void imprimirPelicula() {
+	public void imprimirPelicula(int key) {
 		
 
 		System.out.println("Título: " + this.getNombre());
 		System.out.println("Estreno: " + this.getEstreno());
 		System.out.println("Categoría: " + this.getCategoria());
+		System.out.println("Código: " + key);
 		System.out.println("========================");
 		
 		
