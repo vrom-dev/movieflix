@@ -11,7 +11,7 @@ import modelo.Usuario;
 
 public class GestionUsuariosTest {
 	GestionUsuarios listaUsuarios = new GestionUsuarios();
-	
+
 	@Before
 	public void crearListaUsuarios() {
 		Usuario user2 = new Usuario("Luis", LocalDate.now(), "Madrid");
@@ -24,7 +24,6 @@ public class GestionUsuariosTest {
 		boolean resultado = listaUsuarios.altaUsuarios(2, user);
 		assertTrue(resultado);
 	}
-	
 	
 
 }

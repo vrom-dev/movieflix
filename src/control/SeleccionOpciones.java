@@ -119,12 +119,18 @@ public class SeleccionOpciones {
 				peliculas.listarPorCategoria();
 				break;
 				
-			case 3:
+			case 3: 
+				
+				peliculas.mejorValoradas();
+				
+				break;
+				
+			case 4:
 				/** LISTADO DE USUARIOS */
 				usuarios.listarUsuarios();
 				break;
 
-			case 4:
+			case 5:
 				/** VOLVER AL MENU PRINCIPAL */
 				seguir = false;
 				break;

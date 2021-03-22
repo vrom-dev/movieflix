@@ -67,8 +67,9 @@ public class Menu {
         System.out.println("*  Por favor, escoge una opcion: ");
         System.out.println("*    1.-Listado de películas");
         System.out.println("*    2.-Listado de películas por categoría");
-        System.out.println("*    3.-Listado de usuarios");
-        System.out.println("*    4.-Volver al menu principal");
+        System.out.println("*    3.-Listado de películas mejor valoradas");
+        System.out.println("*    4.-Listado de usuarios");
+        System.out.println("*    5.-Volver al menu principal");
         System.out.println("************************************************");
         System.out.println(" ");
         System.out.print(">> ");    	
