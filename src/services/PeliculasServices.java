@@ -36,4 +36,10 @@ public class PeliculasServices implements IPeliculasServices {
 		peliculas.cargarPeliculas();
 	}
 	
+	public void mejorValoradas() {
+		System.out.println("*    Listados de Peliculas mejor valoradas");
+		System.out.println();
+		peliculas.mejorValoradas();
+	}
+	
 }

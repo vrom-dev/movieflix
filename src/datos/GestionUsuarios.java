@@ -63,13 +63,15 @@ public class GestionUsuarios {
 
 	// metodo eliminarUsuario, falta añadir exception
 
-	public void eliminarUsuario(Integer codigo) {
+	public boolean eliminarUsuario(Integer codigo) {
 		if (listaUsuarios.containsKey(codigo)) {
 			listaUsuarios.remove(codigo);
 			System.out.println("### Eliminación del usuario con código " + codigo + " ###");
 			System.out.println("### Usuario eliminado ###");
+			return true;
 		} else {
 			System.out.println("El usuario no existe ");
+			return false;
 		}
 
 	}

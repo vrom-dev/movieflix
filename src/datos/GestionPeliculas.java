@@ -6,7 +6,6 @@ import java.util.Scanner;
 import modelo.Categorias;
 import modelo.Pelicula;
 
-
 public class GestionPeliculas {
 
 	private HashMap<Integer, Pelicula> peliculas = new HashMap<Integer, Pelicula>();
@@ -39,8 +38,6 @@ public class GestionPeliculas {
 
 	}
 
-
-
 	public void imprimirListaPeliculas() {
 
 		for (Integer i : this.peliculas.keySet()) {
@@ -62,11 +59,11 @@ public class GestionPeliculas {
 	 * @param none
 	 * @return void
 	 * @exception En caso de no encontar el archivo, avisa al usuario de que ha
-	 * habido un problema
+	 *               habido un problema
 	 * 
 	 * 
 	 */
-	public void cargarPeliculas() {
+	public boolean cargarPeliculas() {
 
 		try {
 
@@ -96,22 +93,21 @@ public class GestionPeliculas {
 
 			}
 
-			System.out.println("------------------------------------");
-			System.out.println("- Peliculas cargadas correctamente -");
-			System.out.println("------------------------------------");
+			return true;
 
 		} catch (Exception e) {
 
 			System.out.println("Error al cargar el archivo de películas");
 			e.printStackTrace();
+			return false;
 
 		}
 
 	}
 
 	/**
-	 * Método para buscar una película en concreto a partir del código.
-	 * Devuelve una película.
+	 * Método para buscar una película en concreto a partir del código. Devuelve una
+	 * película.
 	 * 
 	 * @param codigo
 	 * @return película
@@ -123,18 +119,21 @@ public class GestionPeliculas {
 
 	// falta añadir un exception
 	/**
-	 * Método para eliminar películas a partir del código de la misma.
-	 * Con el condicional if comprueba que exista el código para eliminarlo 
-	 * de lo contrario nos indica que el código proporcionado no existe en la lista de películas.
+	 * Método para eliminar películas a partir del código de la misma. Con el
+	 * condicional if comprueba que exista el código para eliminarlo de lo contrario
+	 * nos indica que el código proporcionado no existe en la lista de películas.
+	 * 
 	 * @param codigo
 	 * @return void
 	 * @author ALBERTO
 	 */
-	public void eliminarPelicula(Integer codigo) {
+	public boolean eliminarPelicula(Integer codigo) {
 		if (peliculas.containsKey(codigo)) {
 			peliculas.remove(codigo);
+			return true;
 		} else {
 			System.out.println("Este id no está en la lista de peliculas.");
+			return false;
 		}
 
 	}
@@ -166,6 +165,20 @@ public class GestionPeliculas {
 			if (peliculas.get(key).getCategoria().getCodigo() == id) {
 				peliculas.get(key).imprimirPelicula(key);
 			}
+		}
+
+	}
+
+	public void mejorValoradas() {
+
+		for (Integer i : this.peliculas.keySet()) {
+
+			if (this.peliculas.get(i).getValoracion() > 4) {
+
+				this.peliculas.get(i).imprimirPelicula(i);
+
+			}
+
 		}
 
 	}
