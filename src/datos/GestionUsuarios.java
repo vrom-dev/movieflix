@@ -32,13 +32,24 @@ public class GestionUsuarios {
 	public Usuario buscarUsuario(Integer codigo) {
 		return listaUsuarios.get(codigo);
 	}
-
+	/**
+	 * Añade un usuario al HashMap. Recibe por parámetro un Integer (codigo) con la key
+	 * del mapa y un user (Usuario), que es el usuario a añadir. Devuelve true si el alta 
+	 * se ha realizado con éxito y false si falla.
+	 * 
+	 * @author Víctor
+	 * @param codigo, user
+	 * @return boolean
+	 * 
+	 */
 	// TODO Añadir throw exception y se puede mirar cómo se genera el código
-	public void altaUsuarios(Integer codigo, Usuario user) {
+	public boolean altaUsuarios(Integer codigo, Usuario user) {
 		if (listaUsuarios.containsKey(codigo)) {
 			System.out.println("Este id ya está en la lista de usuarios.");
+			return false;
 		} else {
 			listaUsuarios.put(codigo, user);
+			return true;
 		}
 	}
 

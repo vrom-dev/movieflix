@@ -1,7 +1,7 @@
 package modelo;
 /**
 *
-* @author Tangerine (Víctor Romero)
+* @author Tangerine
 * @version 0.0.1
 */
 import java.time.LocalDate;
@@ -59,6 +59,9 @@ public class Usuario {
 	
 	/** 
 	 * Método inicializa los atributos de cada Usuario.
+	 * @author Víctor
+	 * @param none
+	 * @return void
 	 */
 	public void crearUsuario() {
         try {
@@ -72,6 +75,9 @@ public class Usuario {
 	
 	/** 
 	 * Método que sobreescribe toString().
+	 * @author Víctor
+	 * @param none
+	 * @return String
 	 */
 	@Override
 	public String toString() {
