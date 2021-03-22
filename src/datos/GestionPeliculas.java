@@ -6,7 +6,6 @@ import java.util.Scanner;
 import modelo.Categorias;
 import modelo.Pelicula;
 
-
 public class GestionPeliculas {
 
 	private HashMap<Integer, Pelicula> peliculas = new HashMap<Integer, Pelicula>();
@@ -39,8 +38,6 @@ public class GestionPeliculas {
 
 	}
 
-
-
 	public void imprimirListaPeliculas() {
 
 		for (Integer i : this.peliculas.keySet()) {
@@ -62,7 +59,7 @@ public class GestionPeliculas {
 	 * @param none
 	 * @return void
 	 * @exception En caso de no encontar el archivo, avisa al usuario de que ha
-	 * habido un problema
+	 *               habido un problema
 	 * 
 	 * 
 	 */
@@ -109,8 +106,8 @@ public class GestionPeliculas {
 	}
 
 	/**
-	 * Método para buscar una película en concreto a partir del código.
-	 * Devuelve una película.
+	 * Método para buscar una película en concreto a partir del código. Devuelve una
+	 * película.
 	 * 
 	 * @param codigo
 	 * @return película
@@ -122,9 +119,10 @@ public class GestionPeliculas {
 
 	// falta añadir un exception
 	/**
-	 * Método para eliminar películas a partir del código de la misma.
-	 * Con el condicional if comprueba que exista el código para eliminarlo 
-	 * de lo contrario nos indica que el código proporcionado no existe en la lista de películas.
+	 * Método para eliminar películas a partir del código de la misma. Con el
+	 * condicional if comprueba que exista el código para eliminarlo de lo contrario
+	 * nos indica que el código proporcionado no existe en la lista de películas.
+	 * 
 	 * @param codigo
 	 * @return void
 	 * @author ALBERTO
@@ -141,7 +139,7 @@ public class GestionPeliculas {
 	/**
 	 * @author Luis Rojo
 	 * 
-	 * metodo modificarPeliculas
+	 *         metodo modificarPeliculas
 	 * @param id
 	 */
 	public void modificarPeliculas(Integer id) {
@@ -159,6 +157,20 @@ public class GestionPeliculas {
 			if (peliculas.get(key).getCategoria().getCodigo() == id) {
 				peliculas.get(key).imprimirPelicula(key);
 			}
+		}
+
+	}
+
+	public void mejorValoradas() {
+
+		for (Integer i : this.peliculas.keySet()) {
+
+			if (this.peliculas.get(i).getValoracion() > 4) {
+
+				this.peliculas.get(i).imprimirPelicula(i);
+
+			}
+
 		}
 
 	}

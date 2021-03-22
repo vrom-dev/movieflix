@@ -50,6 +50,22 @@ public class Pelicula {
 	public void setCategoria(Categorias categoria) {
 		this.categoria = categoria;
 	}
+	
+	
+
+
+	public float getValoracion() {
+		return valoracion;
+	}
+
+
+
+
+	public void setValoracion(float valoracion) {
+		this.valoracion = valoracion;
+	}
+
+
 
 
 	@Override
@@ -89,7 +105,7 @@ public class Pelicula {
 	
 	public float valoracion() {
 		
-		float valoracion = (float) (Math.random() * 5 + 1);
+		float valoracion = (float) (Math.random() * 5);
 		return (float) (Math.round(valoracion * 100.0) / 100.0);
 		
 		
