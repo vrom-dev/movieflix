@@ -119,7 +119,12 @@ public class GestionPeliculas {
 
 	}
 
-	// metodo modificarPeliculas
+	/**
+	 * @author Luis Rojo
+	 * 
+	 * metodo modificarPeliculas
+	 * @param id
+	 */
 	public void modificarPeliculas(Integer id) {
 		System.out.println("### Modificación de la Pelicula " + id + " ###");
 		peliculas.get(id).datosPelicula();
