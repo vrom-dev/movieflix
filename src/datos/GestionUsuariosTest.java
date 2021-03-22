@@ -1,12 +1,9 @@
 package datos;
 
 import static org.junit.Assert.*;
-
 import java.time.LocalDate;
-
 import org.junit.Before;
 import org.junit.Test;
-
 import modelo.Usuario;
 
 /**
@@ -39,5 +36,6 @@ public class GestionUsuariosTest {
 		assertFalse(resultado);
 
 	}
+
 
 }
